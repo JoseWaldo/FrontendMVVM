@@ -9,3 +9,78 @@
   margin: 0;
   padding: 0;
 }
+
+:root {
+  --black: #111111;
+  --dark-grey: #3c3c3c;
+  --ligth-grey: #4d4d4d;
+}
+
+.tab_container {
+  display: flex;
+  margin: 0 auto;
+  margin-top: 1.5rem;
+  width: fit-content;
+  font-size: 0.9rem;
+  gap: 1rem;
+  list-style: none;
+  color: var(--ligth-grey)
+}
+
+.tab_item {
+  cursor: pointer;
+}
+
+.tab_current {
+  position: relative;
+}
+
+.tab_current::after {
+  position: absolute;
+  content: "";
+  width: 24px;
+  height: 5px;
+  border-radius: 2px;
+  background-color: var(--black);
+  left: calc(50% - 20px);
+  bottom: -.2rem;
+}
+
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto;
+  margin-top: 3rem;
+  color: var(--dark-grey);
+  font-weight: 600;
+} 
+
+.input {
+  display: block;
+  margin-top: 4px;
+  border: 1.5px solid var(--ligth-grey);
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.7rem;
+  font-size: .8rem;
+  outline: none;
+  color: var(--ligth-grey);
+  width: 100%;
+  font-weight: 500;
+}
+
+.button {
+  background-color: var(--black);
+  font-size: 600;
+  color: #fff;
+  padding: 0.5rem 0;
+  border-radius: 0.5rem;
+  transition: all 500ms ease-in;
+}
+
+.button:hover {
+  box-shadow: 1px 1px 14px -1px var(--ligth-grey);
+}
